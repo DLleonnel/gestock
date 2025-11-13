@@ -1,0 +1,8 @@
+# .railway.toml
+[build]
+builder = "nixpacks"
+# Spécifie la version de PHP à utiliser
+# Vous pouvez choisir 8.1, 8.2, 8.3, etc.
+# Assurez-vous que cette version est compatible avec votre code.
+# Nous utilisons 8.2 ici.
+include = ["php"]
