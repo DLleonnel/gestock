@@ -1,8 +1,0 @@
-[build]
-# Nous allons utiliser une méthode plus simple pour forcer Nixpacks à reconnaître PHP
-# en spécifiant la version directement.
-# La version 8.2 est recommandée si votre WAMP utilisait PHP 8.
-# Si vous aviez PHP 7.4 ou 8.0, utilisez-le.
-
-# Spécifie les paquets nécessaires (y compris PHP)
-packages = ["php@8.2"]
