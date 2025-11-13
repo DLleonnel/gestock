@@ -1,0 +1,213 @@
+/* style.css - Version finale optimisée */
+
+/* --- Variables et Réinitialisation de Base --- */
+:root {
+    --color-primary: #004d99; /* Bleu marine/sombre */
+    --color-secondary: #00bcd4; /* Cyan pour la navigation */
+    --color-success: #28a745;
+    --color-danger: #c82333;
+    --color-warning: #ffc107;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Entête (Header) : Utilisation du Bleu Sombre --- */
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: white; /* Assure que le titre est bien en blanc */
+    margin: 0;
+    font-size: 24px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px; /* Rendu plus "bouton" */
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header a:hover {
+    background-color: #003366; /* Bleu encore plus sombre au survol */
+}
+
+/* --- Contenu Principal (Main) --- */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: var(--color-primary);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* --- Styles spécifiques au Login (Petit et Centré) --- */
+.login-container {
+    /* Le conteneur doit couvrir l'écran pour centrer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background-color: #e9ecef;
+}
+
+.login-container form {
+    /* Le formulaire devient la carte compacte */
+    width: 100%;
+    max-width: 350px; 
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: none;
+    margin: 0; /* Important: Enlever la marge par défaut */
+}
+
+/* --- Styles des Formulaires Généraux (Ajout/Modification/Vente) --- */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0px; /* Rendre le formulaire plus compact */
+    font-weight: bold;
+    color: #495057;
+}
+
+input[type="text"], 
+input[type="number"],
+input[type="password"],
+input[type="file"],
+select {
+    /* Utiliser 100% de la largeur du conteneur parent */
+    width: 100%; 
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px; /* Ajout d'une marge pour l'espacement après le champ */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: var(--color-success);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+/* --- Styles pour la Navigation Cyan --- */
+.nav-block {
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: var(--color-secondary); /* Couleur Cyan */
+}
+
+.nav-block a {
+    color: white; 
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.nav-block a:hover {
+    background-color: #0097a7; /* Cyan plus foncé au survol */
+    text-decoration: none;
+}
+
+/* --- Styles des Tables (dashboard, historique) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+}
+
+/* Styles pour les statuts de stock */
+.status-out-of-stock { 
+    background-color: #fdd; 
+    font-weight: bold;
+    color: var(--color-danger);
+}
+.status-low-stock { 
+    background-color: #ffc; 
+    color: #dda507;
+    font-weight: bold;
+}
+
+table td img {
+    border-radius: 4px;
+}
+
+/* --- Nettoyage de la Navigation Interne par défaut (non utilisé avec nav-block) --- */
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
